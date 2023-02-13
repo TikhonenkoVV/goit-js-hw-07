@@ -7,9 +7,11 @@ const galleryContainer = document.querySelector('.gallery');
 galleryContainer.innerHTML = galleryItems.reduce(
     (html, el) =>
         html +
-        `<a class="gallery__item" href="${el.original}">
-            <img class="gallery__image" src="${el.preview}" alt="${el.description}" />
-        </a>`,
+        `<li>
+            <a class="gallery__item" href="${el.original}">
+                <img class="gallery__image" src="${el.preview}" alt="${el.description}" />
+            </a>
+        </li>`,
     ''
 );
 
